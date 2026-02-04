@@ -1,0 +1,232 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: linear-gradient(135deg, #2c2c2c, #3a3a3a);
+  color: #f5f5f5;
+
+  padding: 1rem 2rem;
+  border-radius: 12px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* Optional logo/title */
+.nav h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Add Button */
+.addbtn {
+  background: linear-gradient(135deg, #6a5af9, #8b7bff);
+  color: white;
+
+  padding: 0.6rem 1.4rem;
+  border-radius: 10px;
+  border: none;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(106, 90, 249, 0.4);
+}
+
+/* Hover effect */
+.addbtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(106, 90, 249, 0.55);
+}
+
+/* Click effect */
+.addbtn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(106, 90, 249, 0.3);
+}
+/* Notes container */
+.notes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+/* Single note card */
+.note-card {
+  background: #1e1e1e;
+  color: #f5f5f5;
+
+  padding: 1.2rem 1.4rem;
+  border-radius: 14px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effect */
+.note-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+}
+
+/* Title */
+.note-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+/* Description */
+.note-card p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #dcdcdc;
+}
+
+/* Subtle accent line */
+.note-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+  width: 4px;
+  background: linear-gradient(180deg, #6a5af9, #8b7bff);
+}
+/* Wrapper */
+.addnote-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Form */
+.addnote-form {
+  width: 100%;
+  max-width: 420px;
+
+  background: #1e1e1e;
+  padding: 1.8rem;
+
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
+}
+
+/* Inputs */
+.addnote-form input {
+  background: #2a2a2a;
+  color: #ffffff;
+
+  border: 1px solid #3a3a3a;
+  border-radius: 10px;
+
+  padding: 0.7rem 0.9rem;
+  font-size: 0.9rem;
+
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.addnote-form input::placeholder {
+  color: #9b9b9b;
+}
+
+/* Focus effect */
+.addnote-form input:focus {
+  border-color: #6a5af9;
+  box-shadow: 0 0 0 2px rgba(106, 90, 249, 0.25);
+}
+
+/* Submit button */
+.addnote-form button {
+  margin-top: 0.5rem;
+
+  background: linear-gradient(135deg, #6a5af9, #8b7bff);
+  color: white;
+
+  border: none;
+  border-radius: 12px;
+
+  padding: 0.7rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.addnote-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(106, 90, 249, 0.45);
+}
+
+/* Active */
+.addnote-form button:active {
+  transform: translateY(0);
+}
+/* Button wrapper (optional but clean spacing) */
+.note-actions {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+}
+
+/* Base button style */
+.note-card button {
+  padding: 0.4rem 0.9rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+/* UPDATE button */
+.update-btn {
+  background: linear-gradient(135deg, #6a5af9, #8b7bff);
+  color: white;
+}
+
+.update-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(106, 90, 249, 0.45);
+}
+
+/* DELETE button */
+.delete-btn {
+  background: #ff4d4f;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #e04345;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(255, 77, 79, 0.45);
+}
+
+/* Click feedback */
+.note-card button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
